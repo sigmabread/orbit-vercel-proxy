@@ -1,0 +1,21 @@
+{
+  "name": "orbit-vercel-proxy",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Vercel-hosted Orbit service-worker proxy frontend using an external Wisp endpoint.",
+  "scripts": {
+    "build": "node scripts/copy-vendor.mjs",
+    "test": "node --test tests/config.test.mjs",
+    "check": "node --check api/config.mjs && node --check scripts/copy-vendor.mjs && node --check public/app.js && node --check public/register-sw.js"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "@mercuryworkshop/bare-mux": "^2.1.8",
+    "@mercuryworkshop/epoxy-transport": "2.1.28",
+    "@titaniumnetwork-dev/ultraviolet": "^3.2.10"
+  }
+}

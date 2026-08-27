@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "functions": {
+    "api/config.mjs": {
+      "maxDuration": 10
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
+        { "key": "Cross-Origin-Embedder-Policy", "value": "require-corp" },
+        { "key": "Referrer-Policy", "value": "no-referrer" }
+      ]
+    }
+  ]
+}
